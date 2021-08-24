@@ -1,9 +1,9 @@
-FROM alpine:3.13.5
+FROM alpine:3.14.1
 LABEL website="Secure Docker Images https://secureimages.dev"
 LABEL description="We secure your business from scratch."
 LABEL maintainer="support@secureimages.dev"
 
-ARG BLACKBOX_EXPORTER_VERSION=0.18.0
+ARG BLACKBOX_EXPORTER_VERSION=0.19.0
 
 RUN wget -P /tmp/ https://github.com/prometheus/blackbox_exporter/releases/download/v${BLACKBOX_EXPORTER_VERSION}/blackbox_exporter-${BLACKBOX_EXPORTER_VERSION}.linux-amd64.tar.gz &&\
     tar -xvzf /tmp/blackbox_exporter-${BLACKBOX_EXPORTER_VERSION}.linux-amd64.tar.gz --strip-components=1 -C /tmp &&\
